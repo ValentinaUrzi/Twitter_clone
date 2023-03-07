@@ -15,7 +15,6 @@
 
   .MainContent {
     display: flex;
-    gap: 10px;
     width: 45%;
   }
 
