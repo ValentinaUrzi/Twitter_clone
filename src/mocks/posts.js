@@ -5,13 +5,15 @@ export const posts = [
         body: "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
         userName: "Alice Spark",
         image: "https://robohash.org/hicveldicta.png",
-        email: "alice.spark@gmail.com",
+        email: "alicesp@gmail.com",
         tags: [
             "history",
             "american",
             "crime"
         ],
-        reactions: 2
+        message: 4,
+        retweet: 5,
+        like : 6
     },
     {
         id: 2,
@@ -19,13 +21,15 @@ export const posts = [
         body: "He was an expert but not in a discipline that anyone could fully appreciate. He knew how to hold the cone just right so that the soft server ice-cream fell into it at the precise angle to form a perfect cone each and every time. It had taken years to perfect and he could now do it without even putting any thought behind it.",
         userName: "Tom Racket",
         image: "https://robohash.org/doloremquesintcorrupti.png",
-        email: "tom.racket@gmail.com",
+        email: "tom.r@gmail.com",
         tags: [
             "french",
             "fiction",
             "english"
         ],
-        reactions: 2
+        message: 9,
+        retweet: 2,
+        like : 1
     },
     {
         id: 3,
@@ -39,7 +43,9 @@ export const posts = [
             "history",
             "french"
         ],
-        reactions: 5
+        message: 3,
+        retweet: 5,
+        like : 9
     },
     {
         id: 4,
@@ -47,13 +53,15 @@ export const posts = [
         body: "All he wanted was a candy bar. It didn't seem like a difficult request to comprehend, but the clerk remained frozen and didn't seem to want to honor the request. It might have had something to do with the gun pointed at his face.",
         userName: "Gregory Bell",
         image: "https://robohash.org/facilisdignissimosdolore.png",
-        email: "bellgreg@gmail.com",
+        email: "bell@gmail.com",
         tags: [
             "mystery",
             "english",
             "american"
         ],
-        reactions: 1
+        message: 6,
+        retweet: 1,
+        like : 8
     },
     {
         id: 5,
@@ -61,13 +69,15 @@ export const posts = [
         body: "Hopes and dreams were dashed that day. It should have been expected, but it still came as a shock. The warning signs had been ignored in favor of the possibility, however remote, that it could actually happen. That possibility had grown from hope to an undeniable belief it must be destiny. That was until it wasn't and the hopes and dreams came crashing down.",
         userName: "Nicole Smith",
         image: "https://robohash.org/adverovelit.png",
-        email: "nikky.smith@email.com",
+        email: "nikkys@email.com",
         tags: [
             "crime",
             "mystery",
             "love"
         ],
-        reactions: 2
+        message: 1,
+        retweet: 6,
+        like : 9
     },
     {
         id: 6,
@@ -75,12 +85,15 @@ export const posts = [
         body: "Dave wasn't exactly sure how he had ended up in this predicament. He ran through all the events that had lead to this current situation and it still didn't make sense. He wanted to spend some time to try and make sense of it all, but he had higher priorities at the moment. The first was how to get out of his current situation of being naked in a tree with snow falling all around and no way for him to get down.",
         userName: "Cole Adams",
         image: "https://robohash.org/laboriosamfacilisrem.png",
-        email: "adamscole@gmail.com",
+        email: "a.cole@gmail.com",
         tags: [
             "english",
             "classic",
             "american"
         ],
-        reactions: 3
+        message: 8,
+        retweet: 9,
+        like : 3
+
     }
 ]

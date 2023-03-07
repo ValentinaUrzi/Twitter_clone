@@ -1,13 +1,12 @@
 import './index.css'
-import menu from '../../assets/icons/menu.png'
-import spark from '../../assets/icons/spark.png'
+import { IoMenu, IoLogoTwitter, IoSparklesOutline } from "react-icons/io5";
 
-const Header = () => {
+const Header = ({ setMenuVisible }) => {
     return (
         <div className="Header">
-            <img src={menu} alt='menu'/>
-            <img src="https://img.icons8.com/fluency/256/twitter.png" alt="twitter logo" />
-            <img src={spark} alt="sparkling icon" />
+            <IoMenu onClick={(() => setMenuVisible((prevMenuVisible)=>!prevMenuVisible))} />
+            <IoLogoTwitter />
+            <IoSparklesOutline />
         </div>
     )
 }

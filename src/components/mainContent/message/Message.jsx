@@ -1,12 +1,10 @@
-import mess from '../../../assets/icons/mess.png'
-import retweet from '../../../assets/icons/retweet.png'
-import pref from '../../../assets/icons/pref.png'
-import share from '../../../assets/icons/share.png'
+import { IoChatbubbleOutline, IoHeartOutline, IoShareOutline } from "react-icons/io5";
+import { BsRepeat } from "react-icons/bs";
 import './index.css'
 
 const Message = ({ postData }) => {
 
-    const { image, userName, email, body } = postData;
+    const { image, userName, email, body, message, retweet, like } = postData;
     return (
         <div className="Message">
             <div className="Message__up-container">
@@ -14,23 +12,23 @@ const Message = ({ postData }) => {
                 <div className="Header__text-container">
                     <span>@{userName.replace(" ", "")}</span>
                     <span> {email}</span>
-                    <p>{body.substring(0, 100)}</p>
+                    <p>{body}</p>
                 </div>
             </div>
             <div className="Message__icon-container">
                 <div>
-                    <img src={mess} alt="message" />
-                    <span>{parseInt(Math.random() * 20)}</span>
+                    <IoChatbubbleOutline />
+                    <span>{message}</span>
                 </div>
                 <div>
-                    <img src={retweet} alt="retweet" />
-                    <span>{parseInt(Math.random() * 20)}</span>
+                    <BsRepeat />
+                    <span>{retweet}</span>
                 </div>
                 <div>
-                    <img src={pref} alt="pref" />
-                    <span>{parseInt(Math.random() * 20)}</span>
+                    <IoHeartOutline />
+                    <span>{like}</span>
                 </div>
-                <img src={share} alt="share" />
+                <IoShareOutline />
             </div>
         </div>
     )

@@ -1,12 +1,11 @@
 .Header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.Header img {
-    width: 30px;
-    height: 30px;
-    margin: 0 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 110px;
+    padding: 15px 0;
+    font-size: 30px;
+    color: #068bdc;
+    border-bottom: 0.2px solid rgba(156, 156, 156, 0.342);
 }

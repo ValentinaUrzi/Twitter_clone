@@ -1,0 +1,23 @@
+.HamburgerMenu {
+    width: 75%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    background-color: white;
+    transform: translate(-110%);
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-visible {
+    transform: translate(0);
+}
+
+.HamburgerMenu div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.HamburgerMenu svg {
+    font-size: 28px;
+}
