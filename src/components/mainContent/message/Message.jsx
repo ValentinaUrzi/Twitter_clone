@@ -1,32 +1,35 @@
+import { useState, useEffect } from 'react'
 import { IoChatbubbleOutline, IoHeartOutline, IoShareOutline } from "react-icons/io5";
 import { BsRepeat } from "react-icons/bs";
 import './index.css'
 
-const Message = ({ postData }) => {
+const Message = ({ userId, body }) => {
 
-    const { image, userName, email, body, message, retweet, like } = postData;
+    const [userData, setUserData] = useState({})
+
+    useEffect(() => {
+        fetch(`https://dummyjson.com/users/${userId}`).then((res) => res.json()).then((data) => setUserData(data))
+    }, [])
+
     return (
         <div className="Message">
             <div className="Message__up-container">
-                <img src={image} alt={userName} className="Message__profile-icon" />
+                <img src={userData.image} alt={userData.username} className="Message__profile-icon" />
                 <div className="Header__text-container">
-                    <span>@{userName.replace(" ", "")}</span>
-                    <span> {email}</span>
+                    <span>@{userData.username}</span>
+                    <span> {userData.email}</span>
                     <p>{body}</p>
                 </div>
             </div>
             <div className="Message__icon-container">
                 <div>
                     <IoChatbubbleOutline />
-                    <span>{message}</span>
                 </div>
                 <div>
                     <BsRepeat />
-                    <span>{retweet}</span>
                 </div>
                 <div>
                     <IoHeartOutline />
-                    <span>{like}</span>
                 </div>
                 <IoShareOutline />
             </div>

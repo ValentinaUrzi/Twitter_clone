@@ -2,7 +2,7 @@
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
-    gap:60px;
+    gap: 60px;
     bottom: 0;
     position: fixed;
     background-color: white;
@@ -10,4 +10,12 @@
     font-size: 28px;
     color: #000000;
     border-top: 0.2px solid rgba(156, 156, 156, 0.342);
+}
+
+.Footer svg {
+    cursor: pointer;
+}
+
+.Footer svg:active {
+    color: #068BDC;
 }

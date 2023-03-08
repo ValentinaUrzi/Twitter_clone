@@ -5,6 +5,9 @@
     background-color: white;
     transform: translate(-110%);
     transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
 }
 
 .menu-visible {
@@ -12,10 +15,20 @@
 }
 
 .HamburgerMenu div {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-top: 10px;
     padding-left: 10px;
+}
+
+.HamburgerMenu div:active{
+    color: #068BDC;
+}
+
+.HamburgerMenu div:last-child{
+    padding-bottom: 10px;
 }
 
 .HamburgerMenu svg {
