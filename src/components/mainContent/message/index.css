@@ -60,3 +60,8 @@
     width: 60px;
     height: 60px;
 }
+
+.no_result {
+    padding: 15px;
+    border-bottom: 0.2px solid rgba(156, 156, 156, 0.342);
+}

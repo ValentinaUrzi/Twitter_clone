@@ -1,0 +1,36 @@
+.Input_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 18%;
+    right: 1%;
+    gap: 10px;
+    top: 8px;
+}
+
+.Input {
+    display: none;
+}
+
+.Input input {
+    background-color: #E7ECF0;
+    color: grey;
+    width: 100%;
+    padding: 0 20px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
+    border: 2px solid transparent;
+}
+
+.Input input:focus {
+    color: white;
+    border: 2px solid #ffffff;
+    background-color: #068bdc;
+}
+
+.Input input:focus::placeholder {
+    color: white;
+}

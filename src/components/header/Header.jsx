@@ -1,11 +1,14 @@
 import './index.css'
 import { IoMenu, IoLogoTwitter, IoSparklesOutline } from "react-icons/io5";
 
-const Header = ({ setMenuVisible }) => {
+const Header = ({ setMenuVisible, isDesktop }) => {
     return (
-        <div className="Header">
-            <IoMenu onClick={(() => setMenuVisible((prevMenuVisible)=>!prevMenuVisible))} />
-            <IoLogoTwitter />
+        <div className={`${isDesktop ? "header_desktop" : 'Header'}`}>
+            {!isDesktop && <>
+                <IoMenu onClick={(() => setMenuVisible((prevMenuVisible) => !prevMenuVisible))} />
+                <IoLogoTwitter />
+            </>}
+            {isDesktop && <h2>Home</h2>} 
             <IoSparklesOutline />
         </div>
     )

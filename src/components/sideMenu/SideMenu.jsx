@@ -1,22 +1,25 @@
 import './index.css'
-import { IoHomeOutline, IoSearchOutline, IoNotificationsOutline, IoMailOutline, IoPersonOutline, IoChatbubblesOutline, IoBookmarksOutline, IoWarningOutline } from "react-icons/io5";
+import { IoLogoTwitter, IoHomeOutline, IoSearchOutline, IoNotificationsOutline, IoMailOutline, IoPersonOutline, IoChatbubblesOutline, IoBookmarksOutline, IoWarningOutline } from "react-icons/io5";
 
-const SideMenu = () => {
+const SideMenu = ({inputRef}) => {
+    const clickSearch = () => {
+    if(inputRef && inputRef.current){
+        inputRef.current.focus()
+    }
+}
+
     return (
         <div className="SideMenu">
-            <div className="profile">
-                <IoPersonOutline />
-                <h3>Profilo</h3>
-            </div>
-            <div className="profile">
+            <IoLogoTwitter className='twitter_logo'/>
+            <div className="home">
                 <IoHomeOutline />
                 <h3>Home</h3>
             </div>
-            <div className="profile">
+            <div className="search" onClick={clickSearch}>
                 <IoSearchOutline />
                 <h3>Cerca</h3>
             </div>
-            <div className="profile">
+            <div className="notify">
                 <IoNotificationsOutline />
                 <h3>Notifiche</h3>
             </div>
@@ -32,10 +35,15 @@ const SideMenu = () => {
                 <IoBookmarksOutline />
                 <h3>Segnalibri</h3>
             </div>
+            <div className="profile">
+                <IoPersonOutline />
+                <h3>Profilo</h3>
+            </div>
             <div className="bugs">
                 <IoWarningOutline />
                 <h3>Bugs</h3>
             </div>
+            <button className='tweet_btn'>Tweet</button>
         </div>
     )
 }

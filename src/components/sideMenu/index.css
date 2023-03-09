@@ -1,20 +1,41 @@
 .SideMenu {
-    width: 30%;
-    display: flex;
+    width: 15%;
     flex-direction: column;
     gap: 10px;
     margin-left: 20px;
     display: none;
+    position: fixed;
 }
 
 .SideMenu div {
     display: flex;
+    margin-left: 30px;
     align-items: center;
     gap: 10px;
     padding-top: 10px;
     cursor: pointer;
 }
 
+.SideMenu div svg{
+    font-size: 20px;
+}
+
 .SideMenu div:hover {
     color: #068BDC;
+}
+
+.twitter_logo {
+    margin-top: 10px;
+    font-size: 30px;
+    color: #068bdc;
+    margin-left: 18px;
+}
+
+.tweet_btn {
+    color: white;
+    height: 40px;
+    background-color: #068bdc;
+    border: none;
+    border-radius: 20px;
+    margin-top: 15px;
 }

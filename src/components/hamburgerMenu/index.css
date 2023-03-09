@@ -1,5 +1,6 @@
 .HamburgerMenu {
     width: 75%;
+    height: 100%;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
     position: fixed;
     background-color: white;
