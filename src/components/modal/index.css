@@ -1,0 +1,38 @@
+.Modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+}
+
+.Modal-visible{
+    display: flex;
+}
+
+.Modal__overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+.Modal__content {
+    width: 600px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.Modal h2 {
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+.Modal .Button {
+    width: 200px;
+}

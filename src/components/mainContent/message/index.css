@@ -23,6 +23,11 @@
     padding: 10px 0;
 }
 
+.Message__option {
+    font-size: 18px;
+    margin-right: 30px;
+}
+
 .Message__icon-container {
     display: flex;
     justify-content: space-evenly;

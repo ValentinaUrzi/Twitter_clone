@@ -1,10 +1,10 @@
 import './index.css'
 
-const Input = ({value, setValue, inputRef}) => {
-    return(
-    <div className="Input">
-        <input type="text" ref={inputRef} value={value} onChange={(e)=>setValue(e.target.value)} placeholder="🔍 Cerca un Tweet"/>
-    </div>)
+const Input = ({ className, type, placeholder, value, setValue, inputRef }) => {
+    return (
+        <div className="Input">
+            <input className={className} type={type} ref={inputRef} value={value} placeholder={placeholder} onChange={(e) => setValue(e.target.value)} />
+        </div>)
 }
 
 export default Input

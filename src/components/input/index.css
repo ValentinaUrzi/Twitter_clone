@@ -12,7 +12,7 @@
     display: none;
 }
 
-.Input input {
+.MainContent_input {
     background-color: #E7ECF0;
     color: grey;
     width: 100%;
@@ -25,12 +25,69 @@
     border: 2px solid transparent;
 }
 
-.Input input:focus {
+.MainContent_input:focus {
     color: white;
     border: 2px solid #ffffff;
     background-color: #068bdc;
 }
 
-.Input input:focus::placeholder {
+.MainContent_input:focus::placeholder {
     color: white;
+}
+
+.Header_input {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 5px solid rgba(156, 156, 156, 0.342);
+    display: none;
+}
+
+.Header_input-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Header_input-top svg {
+    font-size: 70px;
+    margin-left: 15px;
+    color: #068bdc;
+}
+
+.H_input {
+    width: 60%;
+    background-color: transparent;
+}
+
+.Header_input-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #068bdc;
+    font-size: 30px;
+    margin-left: 90px;
+}
+
+.Header_input-icons {
+    display: flex;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+.Header_input-icons svg:nth-child(1) {
+    font-size: 27px;
+}
+
+.Header_input-icons svg:nth-child(3),
+.Header_input-icons svg:nth-child(4) {
+    font-size: 25px;
+}
+
+.Header_input-bottom {
+    padding-bottom: 20px;
+}
+
+.Header_input-bottom .Button {
+    margin-right: 20px;
+    width: 10%;
 }

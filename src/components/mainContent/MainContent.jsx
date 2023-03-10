@@ -6,10 +6,12 @@ import SideMenu from '../sideMenu'
 import { trends } from '../../mocks/trends'
 import HamburgerMenu from '../hamburgerMenu/HamburgerMenu'
 import Header from '../header'
-import { IoSettingsOutline } from 'react-icons/io5'
+import { IoSettingsOutline, IoPersonCircleOutline, IoImageOutline, IoBarChartOutline, IoHappyOutline } from 'react-icons/io5'
+import { AiOutlineGif } from "react-icons/ai";
 import Input from '../input'
+import Button from '../button/Button'
 
-const MainContent = ({ menuVisibile, inputRef }) => {
+const MainContent = ({ menuVisibile, inputRef, setVisibility }) => {
 
     const [postsList, setPostsList] = useState([])
     const [filteredPosts, setFilteredPosts] = useState([])
@@ -29,10 +31,25 @@ const MainContent = ({ menuVisibile, inputRef }) => {
             <SideMenu inputRef={inputRef} />
             <div className="MainContent_message-container">
                 <Header isDesktop />
-                {filteredPosts && filteredPosts.lenght ? filteredPosts.map((post) => (<Message userId={post.userId} body={post.body} key={post.id} />)) : <p className='no_result'>Non ci sono risultati</p>}
+                <div className="Header_input">
+                    <div className="Header_input-top">
+                        <IoPersonCircleOutline />
+                        <Input className="H_input" type='text' placeholder='Cosa succede?' />
+                    </div>
+                    <div className="Header_input-bottom">
+                        <div className="Header_input-icons">
+                            <IoImageOutline />
+                            <AiOutlineGif />
+                            <IoBarChartOutline />
+                            <IoHappyOutline />
+                        </div>
+                        <Button text='Tweet' />
+                    </div>
+                </div>
+                {filteredPosts && filteredPosts.length ? filteredPosts.map((post) => (<Message setVisibility={setVisibility} userId={post.userId} body={post.body} key={post.id} id={post.id} />)) : <p className='no_result'>Non ci sono risultati</p>}
             </div>
             <div className="Input_wrapper">
-                <Input inputRef={inputRef} value={value} setValue={setValue} />
+                <Input className="MainContent_input" inputRef={inputRef} type="text" value={value} placeholder="🔍 Cerca un Tweet" setValue={setValue} />
                 <div className="MainContent_sideTrends">
                     <div className="SideTrends_wrapper"><h2>Trend per te</h2><IoSettingsOutline /></div>
                     {trends.map((trend) => (<SideTrends trendsData={trend} key={trend.id} />))}

@@ -9,7 +9,7 @@
 
 .SideMenu div {
     display: flex;
-    margin-left: 30px;
+    margin-left: 20px;
     align-items: center;
     gap: 10px;
     padding-top: 10px;
@@ -29,13 +29,4 @@
     font-size: 30px;
     color: #068bdc;
     margin-left: 18px;
-}
-
-.tweet_btn {
-    color: white;
-    height: 40px;
-    background-color: #068bdc;
-    border: none;
-    border-radius: 20px;
-    margin-top: 15px;
 }

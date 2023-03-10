@@ -1,16 +1,17 @@
 import './index.css'
 import { IoLogoTwitter, IoHomeOutline, IoSearchOutline, IoNotificationsOutline, IoMailOutline, IoPersonOutline, IoChatbubblesOutline, IoBookmarksOutline, IoWarningOutline } from "react-icons/io5";
+import Button from '../button/Button';
 
-const SideMenu = ({inputRef}) => {
+const SideMenu = ({ inputRef }) => {
     const clickSearch = () => {
-    if(inputRef && inputRef.current){
-        inputRef.current.focus()
+        if (inputRef && inputRef.current) {
+            inputRef.current.focus()
+        }
     }
-}
 
     return (
         <div className="SideMenu">
-            <IoLogoTwitter className='twitter_logo'/>
+            <IoLogoTwitter className='twitter_logo' />
             <div className="home">
                 <IoHomeOutline />
                 <h3>Home</h3>
@@ -43,7 +44,7 @@ const SideMenu = ({inputRef}) => {
                 <IoWarningOutline />
                 <h3>Bugs</h3>
             </div>
-            <button className='tweet_btn'>Tweet</button>
+            <Button text={"Tweet"} />
         </div>
     )
 }
